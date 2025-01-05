@@ -26,9 +26,9 @@ function BookingForm({ submitForm }) {
 
     return (
         <header>
-            <h3>Reserve your Table Now</h3>
+            <h3>Book Now</h3>
             <section>
-                <form onSubmit={handelSubmit}>
+                <form onSubmit={handelSubmit} className="form">
                     <fieldset>
 
                         {/* date */}

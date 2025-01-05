@@ -159,6 +159,15 @@ input, label{
   border-radius: 4px;
 
 }
+.confirm {
+  display: flex;              
+  justify-content: center;     
+  align-items: center;         
+  height: 100vh;              
+  text-align: center;          
+  color: #4a4a4a;
+}
+
 
 .comfirm span{
   color: blue;
@@ -217,6 +226,7 @@ input, label{
 .orderbtn{
   padding: 5px 12px;
   margin-bottom: 20px;
+  margin-left:10px;
   font-size: 16px;
   font-weight: 600;
 }

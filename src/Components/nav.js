@@ -23,7 +23,7 @@ function Nav() {
 
         <ul class={`nav-links ${menuOpen ? "visible" : ""}`}>
             <li>
-                <a href="">Home</a>
+                <a href="/">Home</a>
             </li>
             <li>
                 <a href="">About</a>

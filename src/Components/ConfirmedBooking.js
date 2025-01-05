@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function ConfirmedBooking() {
     return (
         <div className="confirm">
