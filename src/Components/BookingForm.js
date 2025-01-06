@@ -26,7 +26,7 @@ function BookingForm({ submitForm }) {
 
     return (
         <header>
-            <h3>Book Now</h3>
+            <h3 className="booknow">Book Now</h3>
             <section>
                 <form onSubmit={handelSubmit} className="form">
                     <fieldset>

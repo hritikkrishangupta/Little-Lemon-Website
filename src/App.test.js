@@ -1,16 +1,27 @@
+import { render, screen, fireEvent } from "@testing-library/react";
+import BookingForm from './Components/BookingForm';
 
-import { render, screen } from "@testing-library/react";
-import BookingForm from './BookingForm';
-
-test('Renders the BookingForm heading', () => {
-  render(<BookingForm />);
-  const headingElement = screen.getByText("Book Now");
+test('renders the BookingForm heading', () => {
+  render(<BookingForm submitForm={() => { }} />);
+  const headingElement = screen.getByText(/Book Now/i);
   expect(headingElement).toBeInTheDocument();
-})
+});
 
-// Step 2: Test the updateTimes and initializeTimes functions
-// The next step is to validate the behavior of the updateTimes and initializeTimes reducer functions.
+test('submits the form with correct data', () => {
+  const mockSubmitForm = jest.fn();
+  render(<BookingForm submitForm={mockSubmitForm} />);
 
-// Write a unit test for the initializeTimes function to validate that it returns the correct expected value.
+  fireEvent.change(screen.getByLabelText(/Choose Date:/), { target: { value: '2025-01-10' } });
+  fireEvent.change(screen.getByLabelText(/Choose Time:/), { target: { value: '18:00' } });
+  fireEvent.change(screen.getByLabelText(/Number of Guests:/), { target: { value: '4' } });
+  fireEvent.change(screen.getByLabelText(/Occasion:/), { target: { value: 'Birthday' } });
 
-// Write a unit test for the updateTimes function to validate that it returns the same value that is provided in the state. This unit test is important as it will be updated later when the logic of changing the available times based on the selected date is implemented.
+  fireEvent.click(screen.getByText(/Make Your Reservation/i));
+
+  expect(mockSubmitForm).toHaveBeenCalledWith({
+    date: '2025-01-10',
+    times: '18:00',
+    guests: '4',
+    occasion: 'Birthday'
+  });
+});
