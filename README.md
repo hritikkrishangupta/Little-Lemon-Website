@@ -1,7 +1,7 @@
 # Little Lemon Restaurant
 A modern, responsive website for the Little Lemon restaurant, built with React. This project was created as part of the Meta Front-End Developer course.
 
-##Features
+## Features
 Homepage with hero section and specials
 About page with restaurant information
 Menu page with categorized dishes
@@ -13,10 +13,10 @@ Booking confirmation
 Responsive design for all devices
 Unit tests for critical components
 
-##Contributing
+## Contributing
 This project is part of a course assignment and is not open for contributions.
 
-##License
+## License
 This project is part of the Meta Front-End Developer course.
 
 Here are screenshots of my website:
